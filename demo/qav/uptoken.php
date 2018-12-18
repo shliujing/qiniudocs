@@ -6,7 +6,7 @@ use Qiniu\Auth;
 
 header('Access-Control-Allow-Origin:*');
 $bucket = Config::BUCKET_NAME;
-$auth = new Auth(Config::AK, Config::SK);
+$auth = new Auth(getenv('QINIU_ACCESS_KEY'), getenv('QINIU_SECRET_KEY'));
 
 //notify url
 $wmImg = Qiniu\base64_urlSafeEncode('http://rwxf.qiniudn.com/logo-s.png');

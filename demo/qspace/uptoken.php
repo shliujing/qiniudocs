@@ -13,9 +13,11 @@ if(!isset($uid))
 	return;
 }
 
-$bucket = Config::BUCKET_NAME;
-$accessKey = Config::ACCESS_KEY;
-$secretKey = Config::SECRET_KEY;
+
+$bucket = getenv('QINIU_BUCKET');
+$accessKey = getenv('QINIU_ACCESS_KEY');
+$secretKey = getenv('QINIU_SECRET_KEY');
+
 $auth = new Auth($accessKey, $secretKey);
 
 $policy = array(

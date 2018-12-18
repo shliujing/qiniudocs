@@ -4,11 +4,10 @@ header('Access-Control-Allow-Origin:*');
 
 use Qiniu\Auth;
 
-$bucket = 'devtest';
-$accessKey = 'Access_Key';
-$secretKey = 'Secret_Key';
+$accessKey = getenv('QINIU_ACCESS_KEY');
+$secretKey = getenv('QINIU_SECRET_KEY');
+$bucket = "test-pub";
 $auth = new Auth($accessKey, $secretKey);
-
 
 //$upToken = $auth->uploadToken($bucket);
 

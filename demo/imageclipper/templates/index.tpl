@@ -64,7 +64,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://qiniu.sinaapp.com/docs/php-sdk/quick-start.html" target="_blank">快速开发指南</a></li>
+                <li><a href="/docs/php-sdk/quick-start.html" target="_blank">快速开发指南</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">帐号信息<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -81,7 +81,8 @@
 
     </div><!-- /.container-fluid -->
 </nav>
-<div class="container">
+{*<div class="container">*}
+<div class="">
     <div class="row">
         <div class="col-sm-3">
 
@@ -104,9 +105,6 @@
         </div>
         <div class="col-sm-9">
             <div class="thumbnail">
-                <div>
-                    <h5>{$pics[0]['key']}</h5>
-                </div>
                 <hr>
                 <form class="form-inline" action="index.php?fop" method="post" enctype="multipart/form-data">
                     <div class="form-group">

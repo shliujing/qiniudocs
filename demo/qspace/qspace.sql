@@ -9,7 +9,7 @@ CREATE TABLE users (
       PRIMARY KEY (uid)  
 );
 INSERT INTO users (uid, uname, password, status, type) VALUES (123456, 'rwf', 'QixHIQJYZI7Zo', 1, 0);
-INSERT INTO users (uid, uname, password, status, type) VALUES (123456, 'qn', 'QixHIQJYZI7Zo', 1, 1);
+INSERT INTO users (uid, uname, password, status, type) VALUES (123457, 'qn', 'QixHIQJYZI7Zo', 1, 1);
 
 CREATE TABLE files_info (
       id             INT NOT NULL AUTO_INCREMENT,

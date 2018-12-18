@@ -7,13 +7,11 @@
 
         require 'vendor/autoload.php';
 
-        use Qiniu\Auth;
-        use Qiniu\Http\Client;
-        use Qiniu\Http\Error;
-        use Qiniu\Http\Response;
-        use Qiniu\Storage\UploadManager;
+      use Qiniu\Auth;
+      use Qiniu\Http\Client;
+      use Qiniu\Storage\UploadManager;
 
-        if($_FILES['userfile']['error'] > 0) { 
+      if($_FILES['userfile']['error'] > 0) {
 
           echo '错误：';  
 

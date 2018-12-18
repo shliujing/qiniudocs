@@ -107,16 +107,16 @@ if (count($pics) > 0) {
 
     // NROP
 
-    $ret = Client::get("http://$domain/$sn?nrop");
+    $ret = Client::get("http://$domain/$sn?qpulp");
     if ($ret->ok()) {
 
         $json = $ret->json();
         $boolarray = Array(false => 'false', true => 'true');
 
         $props['nrop:code(0：调用成功)'] = $json['code'];
-        $props['nrop:label(0：色情；1：性感；2：正常)'] = $json['fileList'][0]['label'];
-        $props['nrop:rate(概率)'] = $json['fileList'][0]['rate'];
-        $props['nrop:review(人工复审?)'] = $boolarray[$json['fileList'][0]['review']];
+        $props['nrop:label(0：色情；1：性感；2：正常)'] = $json['result']['label'];
+        $props['nrop:rate(概率)'] = $json['result']['score'];
+        $props['nrop:review(人工复审?)'] = $json['result']['review']==false?"false":"true";
     } else {
         $props['nropfailure'] = $ret->body;
     }
