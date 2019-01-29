@@ -17,11 +17,11 @@ foreach ($_SERVER as $key => $value) {
         if ($key == "HTTP_HOST") {
             continue;
         }
-        $headers[strtolower(str_replace('_', '-', substr($key, 5)))] = strtolower($value);
-        $str_header .= strtolower(str_replace('_', '-', substr($key, 5))) . ": " . strtolower($value) . "<br/>";
+        $headers[strtolower(str_replace('_', '-', substr($key, 5)))] = $value;
+        $str_header .= strtolower(str_replace('_', '-', substr($key, 5))) . ": " . $value . "<br/>";
     } else if ($key == "REQUEST_METHOD" || $key == "REQUEST_TIME" || $key == "SERVER_PROTOCOL") {
-        $headers[strtolower($key)] = strtolower($value);
-        $str_header .= strtolower($key) . ": " . strtolower($value) . "<br/>";
+        $headers[strtolower($key)] = $value;
+        $str_header .= strtolower($key) . ": " . $value . "<br/>";
     }
 }
 
