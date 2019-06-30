@@ -1,1 +1,0 @@
-<meta http-equiv="Content-Type" Content="text/html;charset=utf8"/>
