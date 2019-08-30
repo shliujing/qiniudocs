@@ -31,6 +31,7 @@ function test()
     $info['avatar'] = $params['avatarUrl'];
     $info['province'] = $params['province'];
     $info['city'] = $params['city'];
+
     $info['nickName'] = $params['nickName'];
     $info['room'] = $room;
 //    return json(['status' => 1]);
